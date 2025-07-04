@@ -1,49 +1,63 @@
-# Jogo da Forca (Pygame)
+# Jogo da Forca Profissional com Pygame
 
-Um jogo da forca feito em Python com interface gráfica usando Pygame.
+![screenshot](assets/forca_screenshot.png)
 
-## Características
+## Descrição
 
-- Tela de abertura animada com gradiente e brilhos.
-- Menu inicial com seleção de dificuldade (Fácil, Normal, Difícil, Secreta).
-- Interface adaptável a qualquer resolução (fullscreen).
-- Controle de fluxo entre telas (menu, jogo, popups).
-- Sem áudio.
+Este é um projeto modular e profissional do clássico Jogo da Forca, desenvolvido em Python com Pygame. O código foi refatorado para ser limpo, seguro, escalável e fácil de manter, seguindo boas práticas de engenharia de software.
 
-## Como jogar
+## Estrutura do Projeto
 
-1. Execute o arquivo principal:
+```
+projeto_string_forca/
+├── assets/                # Recursos visuais/sonoros (imagens, sons, fontes)
+├── tests/                 # Testes unitários
+├── ui/                    # Componentes de interface (telas, popups, efeitos, desenho da forca)
+│   ├── telas.py
+│   ├── popup.py
+│   ├── efeitos.py
+│   └── forca.py
+├── config.py              # Configurações centralizadas (cores, fontes, dimensões)
+├── forca_pygame.py        # Interface principal e loop do jogo
+├── jogo_forca.py          # Lógica do jogo (core)
+├── palavras.py            # Listas de palavras
+├── LICENSE                # Licença MIT
+└── README.md              # Este arquivo
+```
+
+## Como Executar
+
+1. Instale as dependências:
+   ```bash
+   pip install pygame
+   ```
+2. Execute o jogo:
    ```bash
    python forca_pygame.py
    ```
-2. Escolha a dificuldade no menu inicial.
-3. Digite letras do alfabeto para tentar adivinhar a palavra secreta.
-4. Você vence ao completar a palavra antes de errar 6 vezes!
-5. Use o botão "Opções" para voltar ao menu ou sair a qualquer momento.
 
-## Controles
+## Testes
 
-- **Teclado:**
-  - Letras: tentativas
-  - R: reiniciar após o fim do jogo
-  - ESC: sair
-- **Mouse:**
-  - Clique nos botões do menu, créditos e opções
-
-## Requisitos
-
-- Python 3.8+
-- pygame
-
-Instale o pygame com:
+Os testes unitários estão na pasta `tests/` e cobrem a lógica do jogo:
 
 ```bash
-pip install pygame
+python -m unittest discover tests
 ```
 
-## Créditos
+## Contribuição
 
-Desenvolvido por Amiraldo Almeida
+- Siga o padrão de modularização e documentação do projeto.
+- Use linter (recomendado: `flake8` e `black`) para padronização:
+  ```bash
+  pip install flake8 black
+  flake8 .
+  black .
+  ```
+- Sugestões, issues e pull requests são bem-vindos!
+
+## Licença
+
+MIT. Veja o arquivo `LICENSE`.
 
 ---
 
